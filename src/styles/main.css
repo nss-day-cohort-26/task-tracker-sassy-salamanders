@@ -1,0 +1,39 @@
+body {
+    margin: 40px;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 700px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 50px;
+    font-size: 150%;
+  }
+
+  #toDo {
+      border: solid black 1px;
+      padding: 20px;
+    
+  }
+
+  #doing {
+    border: solid black 1px;
+    padding: 20px;
+}
+
+#done {
+    border: solid black 1px;
+    padding: 20px;
+}
+
+  
