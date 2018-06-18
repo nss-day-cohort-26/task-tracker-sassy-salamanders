@@ -37,4 +37,4 @@ const taskList = Object.create (prototypeObject, {
   taskList.createTask("new pet", "get pet salamander", "2/2/2019", "to do");
   console.log(listArray)
 
-  document.querySelector(".box b").innerHTML = `${taskList}`
+module.exports = taskList;
