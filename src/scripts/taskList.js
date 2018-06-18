@@ -36,5 +36,3 @@ const taskList = Object.create (prototypeObject, {
   taskList.createTask("get drunk", "coding stressing me out", "2/2/2018", "to do");
   taskList.createTask("new pet", "get pet salamander", "2/2/2019", "to do");
   console.log(listArray)
-
-  
