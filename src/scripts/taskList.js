@@ -1,3 +1,4 @@
+const databaseFunction = require("./main");
 const listArray = []
 prototypeObject = {
     newTask: function () {
@@ -37,9 +38,11 @@ const taskList = Object.create (prototypeObject, {
   taskList.createTask("new pet", "get pet salamander", "2/2/2019", "to do");
   console.log(listArray)
 
-module.exports = taskList;
-  console.log("list array", listArray)
+  //console.log("list array", listArray)
+ databaseFunction.saveDatabase(listArray, "ArrayOfTasks")
+ console.log(databaseFunction.saveDatabase)
 
+<<<<<<< HEAD
 //store the array list to Local Storage__________________________________________________________
 const saveDatabase = function (databaseObject, localStorageKey) {
 
@@ -68,3 +71,5 @@ console.log("This is the array list of tasks", allTheStuff);
 // function writeTaskToDom = () => {
 //       for (let i = 0; i < )
 //   }
+=======
+>>>>>>> master
