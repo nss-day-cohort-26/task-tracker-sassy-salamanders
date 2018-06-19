@@ -40,13 +40,10 @@ taskList.createTask("get happy", "coding stressing me out", "2/2/2018", "to do")
 taskList.createTask("new pet", "get pet salamander", "2/2/2019", "to do");
 console.log(taskList.listArray)
 
-<<<<<<< HEAD
 module.exports = taskList;
   console.log("list array", listArray)
-=======
 //console.log("list array", listArray)
 databaseFunction.saveDatabase(taskList.listArray, "ArrayOfTasks")
 console.log(databaseFunction.saveDatabase)
 
 module.exports = taskList;
->>>>>>> master
