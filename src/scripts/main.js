@@ -1,3 +1,4 @@
+
 const databaseFunction = Object.create(null, {
   saveDatabase: {
     enumerable: true,
@@ -17,4 +18,5 @@ const databaseFunction = Object.create(null, {
   }
 })
  module.exports = databaseFunction
+
 
