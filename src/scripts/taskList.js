@@ -1,4 +1,4 @@
-const databaseFunction = require("./main");
+const databaseFunction = require("./database");
 // prototypeObject = {
 //     newTask: function () {
 //         return this.name + summary+due+statusLocation
