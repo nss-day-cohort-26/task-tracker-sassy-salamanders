@@ -41,4 +41,3 @@ const taskList = Object.create (prototypeObject, {
   //console.log("list array", listArray)
  databaseFunction.saveDatabase(listArray, "ArrayOfTasks")
  console.log(databaseFunction.saveDatabase)
-
