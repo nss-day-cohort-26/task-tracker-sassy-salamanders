@@ -1,3 +1,4 @@
+const databaseFunction = require("./main");
 const listArray = []
 prototypeObject = {
     newTask: function () {
