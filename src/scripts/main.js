@@ -4,12 +4,12 @@ const databaseFunction = Object.create(null, {
     enumerable: true,
     value: function (databaseObject, localStorageKey) {
       console.log("Things are workign")
-    const stringifiedDatabase = JSON.stringify(databaseObject)
-    console.log("stored to local storage", databaseObject)
-    localStorage.setItem(localStorageKey, stringifiedDatabase)
+      const stringifiedDatabase = JSON.stringify(databaseObject)
+      console.log("stored to local storage", databaseObject)
+      localStorage.setItem(localStorageKey, stringifiedDatabase)
     }
   },
-   pullFromStorage: {
+  pullFromStorage: {
     enumerable: true,
     value: function (localStorageKey) {
       const databaseString = localStorage.getItem(localStorageKey)
@@ -17,6 +17,4 @@ const databaseFunction = Object.create(null, {
     }
   }
 })
- module.exports = databaseFunction
-
-
+module.exports = databaseFunction
