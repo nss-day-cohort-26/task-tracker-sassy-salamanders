@@ -37,24 +37,30 @@ const taskList = Object.create (prototypeObject, {
   taskList.createTask("new pet", "get pet salamander", "2/2/2019", "to do");
   console.log("list array", listArray)
 
-
+//store the array list to Local Storage__________________________________________________________
 const saveDatabase = function (databaseObject, localStorageKey) {
-    /*
-        Convert the Object into a string.
-    */
+
     const stringifiedDatabase = JSON.stringify(databaseObject)
 
-    /*
-        Create a key in local storage, and store the string
-        version of your inventory database as the value
-    */
-   console.log("database object", databaseObject)
+    console.log("stored to local storage", databaseObject)
     localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
 
 saveDatabase(listArray, "ArrayOfTasks")
 
+//____________LOAD THE ARRAY LIST FROM LOCAL STORAGE______________________________________
+const loadDatabase = function (localStorageKey) {
+    // Get the string version of the database
+    const databaseString = localStorage.getItem(localStorageKey)
 
+    // Use JSON.parse() to convert the string back into an object
+    return JSON.parse(databaseString)
+}
+
+// pull database back from local storage
+let allTheStuff = loadDatabase("ArrayOfTasks");
+
+console.log("This is the array list of tasks", allTheStuff);
 
 // function writeTaskToDom = () => {
 //       for (let i = 0; i < )
