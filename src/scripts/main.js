@@ -1,9 +1,17 @@
 let databaseFunction = require("./database");
 const allTasks = databaseFunction.pullFromStorage("ArrayOfTasks");
-console.log(allTasks)
-for (let i =0; i < allTasks.length; i++) {
-  const newH2 = document.createElement("h2")
-  const todo = document.querySelector("#todoInput")
-  todo.appendChild(newH2)
-  console.log("lets see", allTasks[i])
+console.log("pulled from storage", allTasks)
+
+function makeBox() {
+  for (let i = 0; i < allTasks.length; i++) {
+    let box = document.createElement("div")
+    let header = document.createElement("h4")
+    console.log("allTasks[i]", allTasks[i].name)
+    header.appendChild(document.createTextNode(allTasks[i].name))
+    box.appendChild(header)
+    console.log("lets see", allTasks[i])
+    document.getElementById("toDo").setAttribute("box", draggable="true")
+    document.getElementById("toDo").appendChild(box)
+  }
 }
+makeBox()
