@@ -33,6 +33,7 @@ const taskList = Object.create({}, {
                 }
             })
             this.listArray.push(newTask);
+         databaseFunction.saveDatabase(this.listArray, "ArrayOfTasks")
         }
     }
 })
@@ -43,7 +44,7 @@ console.log(taskList.listArray)
 module.exports = taskList;
   console.log("list array", listArray)
 //console.log("list array", listArray)
-databaseFunction.saveDatabase(taskList.listArray, "ArrayOfTasks")
+//databaseFunction.saveDatabase(taskList.listArray, "ArrayOfTasks")
 console.log(databaseFunction.saveDatabase)
 
 module.exports = taskList;
