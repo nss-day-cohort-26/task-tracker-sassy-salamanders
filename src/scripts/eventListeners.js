@@ -21,6 +21,7 @@ doingColumn.ondragover = allowDrop;
 const toDoColumn = document.querySelector("#toDo")
 toDoColumn.ondragover = allowDrop;
 const allBoxes = document.getElementsByClassName("box");
+const elementClass = document.querySelectorAll(".box").className
 for (let i=0; i < allBoxes.length; i++) {
 allBoxes[i].ondragstart = drag;
 }
