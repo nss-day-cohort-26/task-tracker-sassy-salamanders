@@ -5,8 +5,9 @@ function inputForm () {
     const dueDay= document.getElementById("daydropdown").value
     const dueMonth= document.getElementById("monthdropdown").value
     const dueYear = document.getElementById("yeardropdown").value
+    const dueDate = dueDay + " " + dueMonth + ", " + dueYear;
     const description = document.getElementById("todoDescription").value;
-    taskListFunction.createTask(todo, description, dueDay, dueMonth, dueYear);
+    taskListFunction.createTask(todo, description, dueDate, "to do");
     // const header = document.createTextNode(todo)
     // const text = document.createTextNode(description);
     // const newItem = document.createElement("li")
