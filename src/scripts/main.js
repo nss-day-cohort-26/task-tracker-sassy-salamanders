@@ -9,9 +9,17 @@ function makeBox() {
     console.log("allTasks[i]", allTasks[i].name)
     header.appendChild(document.createTextNode(allTasks[i].name))
     box.appendChild(header)
-    console.log("lets see", allTasks[i])
-    document.getElementById("toDo").setAttribute("box", draggable="true")
+    let description = document.createElement("p")
+    description.appendChild(document.createTextNode(allTasks[i].summary))
+    box.appendChild(description)
+    let date = document.createElement("h5")
+    date.appendChild(document.createTextNode(allTasks[i].due))
+    box.appendChild(date)
+    box.setAttribute("draggable", "true")
+    box.className = "box"
+    box.id = i
     document.getElementById("toDo").appendChild(box)
+    console.log("box", box)
   }
 }
 makeBox()
