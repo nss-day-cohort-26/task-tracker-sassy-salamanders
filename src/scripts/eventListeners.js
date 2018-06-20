@@ -9,8 +9,10 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
+    if (ev.target.id ==="toDo" || ev.target.id=== "doing" || ev.target.id === "done") {
     ev.target.appendChild(document.getElementById(data));
-    console.log(data)
+    }
+    console.log("things", ev.target)
 }
 const doneColumn = document.querySelector("#done")
 doneColumn.ondragover = allowDrop;
