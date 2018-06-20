@@ -3,8 +3,11 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+    if (ev.target.className === "box") {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    console.log("event", ev)
+} 
 
 function drop(ev) {
     ev.preventDefault();
@@ -22,9 +25,9 @@ const toDoColumn = document.querySelector("#toDo")
 toDoColumn.ondragover = allowDrop;
 const allBoxes = document.getElementsByClassName("box");
 const elementClass = document.querySelectorAll(".box").className
-for (let i=0; i < allBoxes.length; i++) {
-allBoxes[i].ondragstart = drag;
-}
+const body = document.querySelector("body")
+console.log(body)
+body.ondragstart = drag;
 toDoColumn.ondrop = drop;
 doneColumn.ondrop = drop;
 doingColumn.ondrop = drop;
