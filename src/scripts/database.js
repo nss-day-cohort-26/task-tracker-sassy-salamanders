@@ -12,7 +12,12 @@ const databaseFunction = Object.create(null, {
       enumerable: true,
       value: function (localStorageKey) {
         const databaseString = localStorage.getItem(localStorageKey)
+       if (databaseString) {
         return JSON.parse(databaseString)
+       } else if (!databaseString) {
+          const ArrayOfTasks= []
+          return ArrayOfTasks
+       }
       }
     }
   })
