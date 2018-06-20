@@ -10,8 +10,11 @@ function makeBox() {
     header.appendChild(document.createTextNode(allTasks[i].name))
     box.appendChild(header)
     console.log("lets see", allTasks[i])
-    document.getElementById("toDo").setAttribute("box", draggable="true")
+    box.setAttribute("draggable", "true")
+    box.className = "box"
+    box.id = i
     document.getElementById("toDo").appendChild(box)
+    console.log("box", box)
   }
 }
 makeBox()
