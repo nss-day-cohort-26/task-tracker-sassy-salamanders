@@ -4,6 +4,6 @@ console.log(allTasks)
 for (let i =0; i < allTasks.length; i++) {
   const newH2 = document.createElement("h2")
   const todo = document.querySelector("#todoInput")
-  newH2.appendChild(todo)
+  todo.appendChild(newH2)
+  console.log("lets see", allTasks[i])
 }
-console.log("lets see", allTasks[i])

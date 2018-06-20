@@ -11,7 +11,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     console.log(ev.target)
     if (ev.target !== elementClass) {
-        ev.target.appendChild(document.getElementById(data)) 
+      ev.target.appendChild(document.getElementById(data));
     }
     //ev.target.appendChild(document.getElementById(data));
     console.log(data)
