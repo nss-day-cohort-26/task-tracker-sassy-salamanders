@@ -7,11 +7,18 @@ function makeBox() {
     let header = document.createElement("h4")
     header.appendChild(document.createTextNode(allTasks[i].name))
     box.appendChild(header)
+
+    let description = document.createElement("p")
+    description.appendChild(document.createTextNode(allTasks[i].summary))
+    box.appendChild(description)
+    let date = document.createElement("h5")
+    date.appendChild(document.createTextNode(allTasks[i].due))
+    box.appendChild(date)
     box.setAttribute("draggable", "true")
-    box.id = [i]
     box.className = "box"
+    box.id = i
     document.getElementById("toDo").appendChild(box)
-    console.log(box)
+    console.log("box", box)
   }
 }
 makeBox()
