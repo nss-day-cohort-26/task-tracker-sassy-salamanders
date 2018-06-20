@@ -4,7 +4,7 @@ const databaseFunction = Object.create(null, {
       enumerable: true,
       value: function (databaseObject, localStorageKey) {
         const stringifiedDatabase = JSON.stringify(databaseObject)
-        console.log("stored to local storage", databaseObject)
+        // console.log("stored to local storage", databaseObject)
         localStorage.setItem(localStorageKey, stringifiedDatabase)
       }
     },
