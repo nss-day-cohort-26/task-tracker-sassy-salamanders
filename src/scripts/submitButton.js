@@ -1,7 +1,7 @@
 let taskListFunction = require("./taskList")
-let databaseFunction = require("./database");
+// let databaseFunction = require("./database");
 let dom = require("./domBuilder");
-const allTasks = databaseFunction.pullFromStorage("ArrayOfTasks");
+// const allTasks = databaseFunction.pullFromStorage("ArrayOfTasks");
 
 function inputForm () {
     const todo= document.getElementById("todoInput").value;

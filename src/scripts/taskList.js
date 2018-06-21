@@ -6,7 +6,9 @@ const databaseFunction = require("./database");
 // }
 const taskList = Object.create({}, {
     listArray: {
-        value: []
+        value: databaseFunction.pullFromStorage("ArrayOfTasks"),
+        writable: true,
+        enumerable: true,
     },
     createTask: {
         value: function (taskName, description, dueDate, location) {
