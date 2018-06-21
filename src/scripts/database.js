@@ -14,7 +14,7 @@ const databaseFunction = Object.create(null, {
         const databaseString = localStorage.getItem(localStorageKey)
        if (databaseString) {
         return JSON.parse(databaseString)
-       } else if (!databaseString) {
+       } else {
           const ArrayOfTasks= []
           return ArrayOfTasks
        }
